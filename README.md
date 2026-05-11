@@ -1,65 +1,16 @@
-﻿# propintel_ai_v1
-# PropIntel Judicial
+# React + Vite
 
-App web para monitoreo judicial inmobiliario en Colombia.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Incluye:
+Currently, two official plugins are available:
 
-- Backend Express
-- Frontend React/Vite
-- MySQL
-- Autenticacion JWT
-- Dashboard
-- Cola de trabajos
-- Worker
-- Cache
-- Rate limit
-- Auditoria
-- Cumplimiento de datos
-- Guia de despliegue Hostinger
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Desarrollo local
+## React Compiler
 
-```powershell
-npm install
-copy .env.example .env
-npm run db:init
-npm run dev
-```
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-En otra terminal:
+## Expanding the ESLint configuration
 
-```powershell
-npm run server
-```
-
-Con MySQL local por Docker:
-
-```powershell
-docker compose up -d
-$env:DB_HOST="127.0.0.1"
-$env:DB_PORT="3306"
-$env:DB_USER="propintel"
-$env:DB_PASSWORD="propintel_pass"
-$env:DB_NAME="propintel"
-npm run db:init
-npm run build
-npm start
-```
-
-Para produccion:
-
-```powershell
-npm install
-npm run build
-npm start
-```
-
-## Modo fuente
-
-- `SOURCE_MODE=demo`: operacion completa sin depender de terceros.
-- `SOURCE_MODE=cpnu`: conector responsable a CPNU sin evasion de controles.
-
-## Despliegue
-
-Lee [HOSTINGER_DEPLOY.md](C:/Users/juanm/Documents/Codex/2026-05-05/te-voy-a-mostrar-un-proyecto/HOSTINGER_DEPLOY.md).
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
